@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.main-wrapper {
+  width: 1046px;
+  margin: 0 auto;
+
+  .title {
+    margin-top: 96.5px;
+    margin-bottom: 35px;
+    font-size: 58px;
+    line-height: 80px;
+    @include title;
+  }
+}

@@ -1,0 +1,11 @@
+@import './libs/normalize.scss';
+@import './variables.scss';
+@import './components/_header.scss';
+@import './components/button.scss';
+@import './components/main.scss';
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

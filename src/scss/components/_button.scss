@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+.button {
+  width: 186px;
+  height: 40px;
+  border: 2px solid $btn-orange;
+  border-radius: 7px;
+  color: $btn-orange;
+  background-color: #fff;
+  cursor: pointer;
+  @include btn-orn;
+}
