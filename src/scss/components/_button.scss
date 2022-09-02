@@ -1,12 +1,25 @@
 @import '../variables.scss';
 
-.button {
+.button-head {
   width: 186px;
   height: 40px;
   border: 2px solid $btn-orange;
   border-radius: 7px;
   color: $btn-orange;
   background-color: #fff;
-  cursor: pointer;
+
   @include btn-orn;
+}
+
+.btn-main {
+  background: #ff685b;
+  width: 128px;
+  height: 52px;
+  border-radius: 5px;
+  color: #ffffff;
+  @include btn-orn;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  border: none;
 }

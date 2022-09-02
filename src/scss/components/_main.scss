@@ -11,4 +11,27 @@
     line-height: 80px;
     @include title;
   }
+
+  .buttons-main {
+    .btn-contacts {
+      @include btn-orn;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      color: $btn-orange;
+      width: 152px;
+      height: 52px;
+      margin-left: 10px;
+      border: 1px solid $btn-orange;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 96.5px;
+  }
 }
