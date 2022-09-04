@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button';
 import Box from './Box';
 import Header from './Header';
@@ -16,7 +17,9 @@ const Main = () => {
         </h1>
         <div className='buttons-main'>
           <Button className='btn-main' />
-          <button className='btn-contacts'>Контакты</button>
+          <Link to='/contacts'>
+            <button className='btn-contacts'>Контакты</button>
+          </Link>
         </div>
         <div className='boxes'>
           <Box image={box1} text='Онлайн прием' />

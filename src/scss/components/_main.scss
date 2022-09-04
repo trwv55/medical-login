@@ -1,8 +1,10 @@
 @import '../variables.scss';
 
 .main-wrapper {
-  width: 1046px;
+  max-width: 1046px;
+  width: 100%;
   margin: 0 auto;
+  // padding: 0 15px;
 
   .title {
     margin-top: 96.5px;
@@ -11,8 +13,16 @@
     line-height: 80px;
     @include title;
   }
+  .title-wp {
+    margin-top: 221px;
+  }
+  .title-contacts {
+    margin-top: 184.5px;
+  }
 
   .buttons-main {
+    display: flex;
+    flex-direction: row;
     .btn-contacts {
       @include btn-orn;
       font-weight: 700;
@@ -25,6 +35,9 @@
       border: 1px solid $btn-orange;
       border-radius: 5px;
       background-color: #fff;
+    }
+    .btn-contacts-wp {
+      width: 228px;
     }
   }
 

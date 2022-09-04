@@ -8,12 +8,12 @@ const Button = ({ className }) => {
   let location = useLocation();
 
   const handleClick = () => {
-    setIsAutorised(!isAutorised);
     setLogForm(!logForm);
 
-    if (location.pathname === '/success') {
-      setLogForm(false);
+    if (isAutorised) {
+      setIsAutorised(false);
       navigate('/');
+      setLogForm(false);
     }
   };
 

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const LoginForm = ({ data, setData }) => {
   let navigate = useNavigate();
-  const { setLogForm } = useContext(LogForm);
+  const { setLogForm, setIsAutorised } = useContext(LogForm);
   const [passwordErr, setPasswordErr] = useState('Пароль должен быть минимум 8 символов');
   const [login, setLogin] = useState(data[0]?.login);
   const [password, setPassword] = useState(data[0]?.password);
@@ -33,6 +33,7 @@ const LoginForm = ({ data, setData }) => {
     if (passwordErr === '') {
       setData([...data, newUser]);
       setLogForm(false);
+      setIsAutorised(true);
       navigate('/success');
     }
   };

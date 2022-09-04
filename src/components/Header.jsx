@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/header-logo.svg';
 
 const Header = () => {
@@ -10,7 +10,9 @@ const Header = () => {
         <img src={logo} alt='' />
       </div>
       <ul className='info'>
-        <span>Контакты</span>
+        {/* <Link to='/contacts'> */}
+        <a href='/contacts'>Контакты</a>
+        {/* </Link> */}
         <div className='header-button'>
           <Button className='button-head' />
         </div>

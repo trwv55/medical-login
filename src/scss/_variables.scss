@@ -17,3 +17,14 @@ $btn-orange: #ff685b;
   letter-spacing: 0.2px;
   color: #252b42;
 }
+
+%btn-main {
+  background: #ff685b;
+  height: 52px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  border: none;
+}
