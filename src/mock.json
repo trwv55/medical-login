@@ -1,6 +1,8 @@
-{
+[
+  {
   "id": "0",
   "login": "test1",
-  "password": "test123test",
+  "password": "test123",
   "name": "Сергей"
 }
+]

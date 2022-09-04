@@ -1,12 +1,28 @@
 import React, { useContext } from 'react';
 import { LogForm } from '../App';
+import { useNavigate, useLocation } from 'react-router';
 
 const Button = ({ className }) => {
-  const { logForm, setLogForm } = useContext(LogForm);
+  const { setIsAutorised, isAutorised, setLogForm, logForm } = useContext(LogForm);
+  let navigate = useNavigate();
+  let location = useLocation();
+
+  const handleClick = () => {
+    setIsAutorised(!isAutorised);
+    setLogForm(!logForm);
+
+    if (location.pathname === '/success') {
+      setLogForm(false);
+      navigate('/');
+    }
+  };
+
   return (
-    <button className={className} onClick={() => setLogForm(!logForm)}>
-      Войти
-    </button>
+    <div className='button-wrapper'>
+      <button onClick={handleClick} className={className}>
+        {isAutorised ? 'Выйти' : 'Войти'}
+      </button>
+    </div>
   );
 };
 
