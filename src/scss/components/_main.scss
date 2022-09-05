@@ -1,10 +1,10 @@
 @import '../variables.scss';
 
 .main-wrapper {
-  max-width: 1046px;
+  max-width: 1056px;
   width: 100%;
   margin: 0 auto;
-  // padding: 0 15px;
+  padding: 0 10px;
 
   .title {
     margin-top: 96.5px;
@@ -12,6 +12,15 @@
     font-size: 58px;
     line-height: 80px;
     @include title;
+
+    @media screen and (max-width: 780px) {
+      font-size: 38px;
+      line-height: 51px;
+    }
+    @media screen and (max-width: 525px) {
+      font-size: 28px;
+      line-height: 39px;
+    }
   }
   .title-wp {
     margin-top: 221px;
@@ -46,5 +55,12 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 96.5px;
+
+    @media screen and (max-width: 1035px) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: 525px) {
+      align-items: center;
+    }
   }
 }

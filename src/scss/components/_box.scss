@@ -1,4 +1,7 @@
 .box {
+  @media screen and (max-width: 1035px) {
+    margin-bottom: 30px;
+  }
   .box-wrapper {
     width: 328px;
     height: 248px;

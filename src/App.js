@@ -1,5 +1,5 @@
-import React, { useState, createContext } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import React, { useState, createContext, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './scss/app.scss';
 import Main from './components/Main';
 import LoginForm from './components/LoginForm';
@@ -11,11 +11,14 @@ import mock from './mock.json';
 export const LogForm = createContext();
 
 function App() {
+  const initialState = JSON.parse(window.localStorage.getItem('data')) || mock;
   const [logForm, setLogForm] = useState(false);
-  console.log('logForm', logForm);
-  const [data, setData] = useState(mock);
+  const [data, setData] = useState(initialState);
   const [isAutorised, setIsAutorised] = useState(false);
-  console.log('isAutorised', isAutorised);
+
+  useEffect(() => {
+    window.localStorage.setItem('data', JSON.stringify(data));
+  }, [data]);
 
   return (
     <div className='app-wrapper'>

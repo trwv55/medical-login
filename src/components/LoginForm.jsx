@@ -19,7 +19,6 @@ const LoginForm = ({ data, setData }) => {
       setPasswordErr('');
     }
   };
-  //   const re = /^[A-Za-z]\w{8,14}$/;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,7 +49,7 @@ const LoginForm = ({ data, setData }) => {
               type='text'
               required='required'
             />
-            <span>Login</span>
+            <span>Имя</span>
           </div>
           <div className='inputbox'>
             <input
@@ -61,7 +60,7 @@ const LoginForm = ({ data, setData }) => {
             />
             <div style={{ color: 'red' }}>{passwordErr}</div>
 
-            <span>Password</span>
+            <span>Пароль</span>
           </div>
           <div className='inputbox'>
             <button className='input-btn' type='submit'>

@@ -7,8 +7,12 @@
   border-radius: 7px;
   color: $btn-orange;
   background-color: #fff;
-
   @include btn-orn;
+
+  @media screen and (max-width: 525px) {
+    width: 106px;
+    height: 36px;
+  }
 }
 
 .btn-main {
